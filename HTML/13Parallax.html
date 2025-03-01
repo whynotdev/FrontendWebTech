@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .parallax {
+            position: relative;
+            background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+            background: rgb(217, 54, 54);
+        }
+
+        .layer {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: rgb(241, 93, 93);
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .layer1 {
+            top: 30%;
+            animation: moveSlow 5s linear infinite alternate;
+        }
+        .layer2 {
+            top: 50%;
+            animation: moveFast 3s linear infinite alternate;
+        }
+
+        @keyframes moveSlow {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(20px); }
+        }
+        @keyframes moveFast {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(40px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <div class="layer layer1">Layer 1 - Slower Scroll</div>
+        <div class="layer layer2">Layer 2 - Faster Scroll</div>
+    </div>
+    
+    <div class="content">
+        <h2>Parallax Scrolling Effect</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec libero vehicula, varius ligula id, dictum orci.</p>
+    </div>
+
+    <div class="parallax" style="background-image: url('https://source.unsplash.com/1600x900/?mountain,sky');">
+        <div class="layer layer1">Another Layer</div>
+    </div>
+</body>
+</html>
