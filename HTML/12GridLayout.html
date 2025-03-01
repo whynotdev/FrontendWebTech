@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "header header"
+          "content1 content2"
+          "content3 content4"
+          "content5 content6"
+          "footer footer";
+        gap: 10px;
+        min-height: 100vh;
+        padding: 10px;
+      }
+
+      .header {
+        grid-area: header;
+        background: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5em;
+      }
+
+      .content-box {
+        padding: 20px;
+        background: #f1f1f1;
+        text-align: center;
+        font-size: 1.2em;
+      }
+
+      .content1 { grid-area: content1; }
+      .content2 { grid-area: content2; }
+      .content3 { grid-area: content3; }
+      .content4 { grid-area: content4; }
+      .content5 { grid-area: content5; }
+      .content6 { grid-area: content6; }
+
+      .footer {
+        grid-area: footer;
+        background: #007bff;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header"
+            "content1"
+            "content2"
+            "content3"
+            "content4"
+            "content5"
+            "content6"
+            "footer";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">CSS Grid Layout</div>
+      <div class="content-box content1">Content Box 1</div>
+      <div class="content-box content2">Content Box 2</div>
+      <div class="content-box content3">Content Box 3</div>
+      <div class="content-box content4">Content Box 4</div>
+      <div class="content-box content5">Content Box 5</div>
+      <div class="content-box content6">Content Box 6</div>
+      <div class="footer">Footer Section</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Styling</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    footer {
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 16px;
+    }
+    .footer-links {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 20px;
+    }
+    .footer-links li {
+      margin: 5px 0;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple webpage with a styled footer.</p>
+  </main>
+  
+  <footer>
+    &copy; 2025 Your Name. All Rights Reserved.
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

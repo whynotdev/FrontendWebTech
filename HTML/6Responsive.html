@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #555;
+      color: white;
+      padding: 20px;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    footer {
+      margin-top: auto;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Some sidebar content here.</p>
+    </aside>
+    <main class="content">
+      <h2>Main Content</h2>
+      <p>This is the main content area.</p>
+    </main>
+  </div>
+  <footer>
+    &copy; 2025 Your Name. All Rights Reserved.
+  </footer>
+</body>
+</html>

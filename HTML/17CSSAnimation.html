@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      body {
+        background: linear-gradient(to right, #dd6be6, #560349);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .ball {
+        width: 50px;
+        height: 50px;
+        background: radial-gradient(circle, #ff007f, #ff4500);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        animation: bounce 2s infinite ease-in-out, moveAcross 4s infinite linear;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-200px);
+        }
+      }
+
+      @keyframes moveAcross {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: 100%;
+          transform: translateX(-100%);
+        }
+      }
+
+      .logo {
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: fadeInMove 3s ease-in-out forwards;
+      }
+
+      @keyframes fadeInMove {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">Welcome to Whynotdev</div>
+    <div class="ball"></div>
+  </body>
+</html>
