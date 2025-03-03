@@ -1,0 +1,91 @@
+
+1. Basic Structure & Layout
+Objective: Build a simple page layout using HTML and Bootstrap's grid system.
+Question: Create a webpage with the following structure:
+A header with the title of the website in the center.
+A navigation bar with links (Home, About, Services, Contact).
+A main content area with two columns: a left column with text (about the company) and a right column with an image.
+A footer at the bottom with contact information (e.g., phone number and email).
+Skills Tested: Basic HTML structure, Bootstrap grid system, Navbar component.
+
+2. Responsive Design
+Objective: Use Bootstrap’s responsive features to create a layout that adjusts based on screen size.
+Question: Build a page with a large hero image (full-width) that adjusts based on screen size.
+On larger screens, the hero section should cover 100% of the viewport.
+On mobile devices, ensure the hero image scales appropriately and the text is centered.
+Below the hero section, add a three-column section (About Us, Our Services, and Contact).
+Each of the sections should stack on smaller screens.
+Skills Tested: Bootstrap grid, responsiveness, image styling.
+
+3. Custom Forms & Styling
+Objective: Create a custom contact form with validation.
+Question: Design a contact form that includes:
+Input fields for Name, Email, Message, and a Submit button.
+Use Bootstrap form components like form-control for styling.
+Include client-side validation (e.g., the email field must have a valid email format).
+Add a confirmation message that appears once the form is submitted.
+Ensure the form layout is responsive for mobile views.
+Skills Tested: Form handling, validation, Bootstrap form components, responsiveness.
+
+4. Navigation Bar with Dropdowns
+Objective: Create a navigation bar with dropdown menus and icons.
+Question: Build a navigation bar that:
+Includes a logo on the left side.
+Has a dropdown menu for "Services" with at least three options.
+Includes links for "Home," "About," and "Contact."
+On hover, the dropdown menu should reveal options.
+Use icons in the navigation bar for Home and Contact links (you can use Bootstrap icons or FontAwesome).
+Skills Tested: Navbar component, dropdowns, icons.
+
+5. Card Layouts
+Objective: Use Bootstrap cards to create a product/service showcase.
+Question: Create a section that displays at least 4 products or services using Bootstrap’s card component.
+Each card should have a title, an image, a description, and a "Learn More" button.
+Use the Bootstrap grid system to make sure the cards are responsive and stack vertically on smaller screens.
+Add hover effects on the cards to scale them slightly when hovered.
+Skills Tested: Bootstrap cards, hover effects, grid system.
+
+6. Modal Window Implementation
+Objective: Add a modal to your page for extra content or a quick form.
+Question: Add a "Sign Up" button on the homepage that, when clicked, opens a modal window with a form that includes:
+Name, email, and password fields.
+A "Submit" button.
+Make sure the modal closes when the user clicks outside of it or clicks the close button.
+Skills Tested: Bootstrap modal, JavaScript interaction.
+
+7. Footer with Social Media Links
+Objective: Design a footer with social media icons and a contact section.
+Question: Design a footer that contains:
+Links to social media (Facebook, Twitter, Instagram, LinkedIn) using icons.
+A small "About Us" section with a brief text.
+Use Bootstrap grid system to organize the footer into multiple columns, ensuring it is responsive.
+Skills Tested: Footer design, social media icons, Bootstrap grid.
+
+8. Image Carousel
+Objective: Create an image carousel/slider using Bootstrap.
+Question: Implement an image carousel that:
+Displays a series of 3–5 images.
+Includes next/previous controls for navigating the images.
+Auto-rotates between the images every few seconds.
+Ensure the carousel is fully responsive for mobile and tablet views.
+Skills Tested: Bootstrap carousel, responsiveness, JavaScript integration.
+
+9. Hero Section with Text Overlay
+Objective: Create a hero section with an overlay and call-to-action button.
+Question: Build a hero section that:
+Has a large background image covering the full width of the screen.
+Overlays a semi-transparent color on the image.
+Centers text within the hero section with a call-to-action button like “Get Started.”
+Ensure that the content is vertically centered regardless of screen size.
+Skills Tested: Image backgrounds, text positioning, CSS overlays, responsiveness.
+
+10. Smooth Scroll Navigation
+Objective: Implement smooth scrolling for navigation.
+Question: Create a webpage with multiple sections (Home, About, Services, Contact).
+The navigation bar should link to each of these sections.
+Implement smooth scrolling behavior when clicking the navigation links.
+The page should scroll to the relevant section smoothly without jumping.
+Skills Tested: Anchor links, smooth scrolling, JavaScript.
+
+These questions will help you practice essential skills for creating responsive, dynamic, and visually appealing websites using HTML, CSS, and Bootstrap. Each question is meant to challenge you to implement core web development concepts, and they progressively get more complex.
+

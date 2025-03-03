@@ -1,0 +1,215 @@
+1. Introduction to TypeScript
+What is TypeScript? TypeScript is a superset of JavaScript that adds static typing to the language. It helps catch errors during development rather than runtime by providing type annotations. TypeScript code is compiled into regular JavaScript to run in any environment.
+Hands-on Exercise:
+Install TypeScript (refer to the earlier guide for installation).
+Create a new TypeScript file (app.ts), and write the following code:
+ let message: string = "Hello, TypeScript!";
+console.log(message);
+
+Compile it (tsc app.ts) and run the generated app.js file using Node.js (node app.js).
+
+2. Basic Types and Syntax
+TypeScript has basic types that help define the kind of data your variables hold. These types include:
+string: Represents text.
+number: Represents numerical values (integer or float).
+boolean: Represents true or false values.
+any: Can represent any type (similar to JavaScript).
+void: Used in functions that don't return a value.
+null and undefined: Represent absence of value.
+Hands-on Exercise:
+Write a TypeScript program that uses different types:
+let name: string = "John";
+let age: number = 25;
+let isStudent: boolean = true;
+let address: any = null;
+
+console.log(`Name: ${name}, Age: ${age}, Student: ${isStudent}`);
+
+Compile and run the program to ensure everything works correctly.
+
+3. Interfaces and Classes
+Interfaces define the shape of objects and allow TypeScript to enforce that objects adhere to a structure.
+ Classes allow for object-oriented programming and can be enhanced with features such as constructors, properties, and methods.
+Hands-on Exercise:
+Interface example:
+
+ interface Person {
+  name: string;
+  age: number;
+}
+
+let employee: Person = {
+  name: "Alice",
+  age: 30
+};
+console.log(employee);
+
+Class example:
+
+ class Car {
+  make: string;
+  model: string;
+
+  constructor(make: string, model: string) {
+    this.make = make;
+    this.model = model;
+  }
+
+  drive() {
+    console.log(`${this.make} ${this.model} is driving!`);
+  }
+}
+
+const car = new Car("Tesla", "Model 3");
+car.drive();
+
+
+4. Advanced Types (Generics, Enums, Union Types)
+Generics allow you to write flexible, reusable functions and classes that work with a variety of types.
+Enums are a way of defining a set of named constants (useful for representing fixed sets of values).
+Union Types allow a variable to hold more than one type of value (e.g., string | number).
+Hands-on Exercise:
+Generics:
+
+ function identity<T>(arg: T): T {
+  return arg;
+}
+
+console.log(identity(42));       // 42
+console.log(identity("hello"));  // hello
+Enums:
+
+ enum Direction {
+  Up = 1,
+  Down,
+  Left,
+  Right
+}
+
+let move: Direction = Direction.Up;
+console.log(move); // Output: 1
+Union Types:
+
+ function printId(id: string | number): void {
+  console.log(`ID: ${id}`);
+}
+
+printId("123");
+printId(456);
+
+
+5. Functions and Arrow Functions
+Functions allow you to define reusable code blocks. TypeScript allows you to type function parameters and return types.
+Arrow functions are shorter and often used for anonymous functions and callbacks.
+Hands-on Exercise:
+Function with Types:
+
+ function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("John"));
+
+Arrow Function:
+
+ const sum = (a: number, b: number): number => a + b;
+console.log(sum(5, 10));  // 15
+
+
+6. Modules and Namespaces
+Modules are used to structure code in separate files, where each file can export and import functionality.
+ Namespaces (though less commonly used in modern TypeScript code) are an older way of organizing code in a global scope.
+Hands-on Exercise:
+Module Example:
+
+
+math.ts:
+ export function add(a: number, b: number): number {
+  return a + b;
+}
+
+
+app.ts:
+ import { add } from './math';
+
+console.log(add(10, 20));  // 30
+
+
+2. Namespace Example (optional for older TypeScript versions):
+
+ namespace Calculator {
+  export function add(a: number, b: number): number {
+    return a + b;
+  }
+}
+
+console.log(Calculator.add(10, 20));  // 30
+
+
+7. Type Declaration Files (.d.ts)
+Type Declaration Files (.d.ts) describe the shape of an external JavaScript library or module. They are used when working with libraries that don’t have TypeScript support.
+Hands-on Exercise:
+If you are using a JavaScript library without type definitions, you can create a .d.ts file to define its types:
+Create math.d.ts:
+
+ declare module "math-lib" {
+  export function add(a: number, b: number): number;
+  export function subtract(a: number, b: number): number;
+}
+
+Now, in your main .ts file:
+
+ import * as math from "math-lib";
+console.log(math.add(10, 20));
+
+You can also install third-party type definitions using npm:
+npm install --save-dev @types/node
+
+
+8. Decorators
+Decorators are functions that can be used to modify classes, methods, or properties. They are an experimental feature in TypeScript and provide metadata and additional behavior to your code.
+Hands-on Exercise:
+Class Decorator Example:
+ function logClass(target: Function) {
+  console.log(`Class ${target.name} is created!`);
+}
+
+@logClass
+class Person {
+  constructor(public name: string) {}
+}
+
+const person = new Person("Alice");
+
+To enable decorators, you need to enable experimental features by adding "experimentalDecorators": true in your tsconfig.json.
+
+9. Error Handling
+TypeScript allows you to handle errors with try-catch blocks. You can also type the errors that may occur.
+Hands-on Exercise:
+Error Handling Example:
+ function divide(a: number, b: number): number {
+  if (b === 0) {
+    throw new Error("Cannot divide by zero!");
+  }
+  return a / b;
+}
+
+try {
+  console.log(divide(10, 0));
+} catch (error) {
+  console.error(error.message);  // Output: Cannot divide by zero!
+}
+
+You can also define custom error types using classes.
+
+Summary of Exercises
+Introduction to TypeScript: Set up TypeScript and write basic code.
+Basic Types and Syntax: Use different data types in TypeScript.
+Interfaces and Classes: Create structured objects with interfaces and define classes with methods.
+Advanced Types: Use generics, enums, and union types.
+Functions and Arrow Functions: Define and use functions with typed parameters and return types.
+Modules and Namespaces: Organize code into modules and optionally use namespaces.
+Type Declaration Files: Create type definitions for external JavaScript libraries.
+Decorators: Enhance classes, methods, or properties with decorators.
+Error Handling: Implement try-catch for error handling.
+
