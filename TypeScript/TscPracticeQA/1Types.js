@@ -1,0 +1,12 @@
+var num = 42;
+var str = "Hello, TypeScript!";
+var bool = true;
+var nullValue = null;
+var undefinedValue = undefined;
+var anyValue = "This can be anything";
+console.log("Number:", num);
+console.log("String:", str);
+console.log("Boolean:", bool);
+console.log("Null:", nullValue);
+console.log("Undefined:", undefinedValue);
+console.log("Any:", anyValue);
